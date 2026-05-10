@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================================================
+   ROCHA — GLOBAL STYLES
+   Tokens via Tailwind config; here sólo estilos cross-app
+   ========================================================= */
+@layer base {
+  :root {
+    --max-site: 1400px;
+    --gutter: clamp(18px, 4vw, 48px);
+    --space: clamp(64px, 10vw, 160px);
+  }
+
+  @media (max-width: 720px) {
+    :root {
+      --gutter: 18px;
+      --space: 64px;
+    }
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-bg text-ink;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    font-feature-settings: "ss01";
+  }
+
+  /* Grano sutil tendencia 2025/26 */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9' numOctaves='3' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    mix-blend-mode: multiply;
+  }
+
+  ::selection {
+    @apply bg-accent text-bg;
+  }
+
+  h1, h2, h3, h4 {
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* =========================================================
+   COMPONENTES REUSABLES
+   ========================================================= */
+@layer components {
+  /* WRAPPER */
+  .wrap {
+    max-width: var(--max-site);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+  }
+
+  /* TIPOGRAFÍA DISPLAY — móvil-first con clamps generosos en mobile */
+  .h-display {
+    @apply font-serif font-normal;
+    font-size: clamp(2.4rem, 14vw, 9rem);
+    line-height: 0.92;
+    letter-spacing: -0.035em;
+    font-variation-settings: "opsz" 144, "SOFT" 50;
+  }
+  .h1 {
+    @apply font-serif font-normal;
+    font-size: clamp(2rem, 11vw, 6rem);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    font-variation-settings: "opsz" 96, "SOFT" 30;
+  }
+  .h2 {
+    @apply font-serif font-normal;
+    font-size: clamp(1.7rem, 9vw, 4rem);
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    font-variation-settings: "opsz" 80, "SOFT" 30;
+  }
+  .h3 {
+    @apply font-serif;
+    font-size: clamp(1.15rem, 4vw, 1.85rem);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+  }
+
+  .mono-label {
+    @apply font-mono uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+  }
+
+  /* BOTONES */
+  .btn {
+    @apply inline-flex items-center gap-3 px-6 py-3.5 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap cursor-pointer border border-transparent;
+    letter-spacing: -0.01em;
+  }
+  .btn-accent {
+    @apply bg-accent text-paper;
+  }
+  .btn-accent:hover {
+    @apply bg-accent-deep -translate-y-px;
+  }
+  .btn-ink {
+    @apply bg-ink text-bg;
+  }
+  .btn-ink:hover {
+    @apply bg-accent -translate-y-px;
+  }
+  .btn-outline {
+    @apply bg-transparent border-ink text-ink;
+  }
+  .btn-outline:hover {
+    @apply bg-ink text-bg;
+  }
+  .btn-ghost {
+    @apply bg-paper border-line text-ink;
+  }
+  .btn-ghost:hover {
+    @apply border-ink;
+  }
+  .btn-lg {
+    @apply px-8 py-[18px] text-base;
+  }
+  .btn-sm {
+    @apply px-4 py-2.5 text-[0.82rem];
+  }
+  .btn .arrow {
+    @apply inline-block transition-transform duration-300;
+  }
+  .btn:hover .arrow {
+    @apply translate-x-1;
+  }
+
+  /* REVEAL ANIMATION */
+  .reveal {
+    @apply opacity-0 translate-y-10 transition-all duration-1000;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .reveal.in {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+/* =========================================================
+   ANIMACIONES & UTILIDADES
+   ========================================================= */
+.section-padding {
+  padding-top: var(--space);
+  padding-bottom: var(--space);
+}
+
+/* swatches de madera */
+.swatch-pino   { background: linear-gradient(145deg, #EFD4A6 0%, #C99B5F 60%, #9C7240 100%); }
+.swatch-rauli  { background: linear-gradient(145deg, #B97648 0%, #844A26 55%, #532812 100%); }
+.swatch-coigue { background: linear-gradient(145deg, #D9A87A 0%, #A1714B 55%, #674229 100%); }
+.swatch-roble  { background: linear-gradient(145deg, #C68F52 0%, #8E5C2E 55%, #4F3019 100%); }

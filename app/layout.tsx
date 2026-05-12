@@ -103,7 +103,7 @@ const jsonLd = {
   ],
   priceRange: "$$",
   image: `${siteConfig.site.url}/canva/muebleria-rocha.jpg`,
-  sameAs: []
+  sameAs: [siteConfig.social.instagram].filter(Boolean)
 };
 
 export default function RootLayout({

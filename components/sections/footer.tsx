@@ -76,6 +76,16 @@ export function Footer() {
             >
               WhatsApp →
             </a>
+            {siteConfig.social.instagram && (
+              <a
+                href={siteConfig.social.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-[0.95rem] mb-2.5 hover:text-accent transition-colors"
+              >
+                Instagram →
+              </a>
+            )}
             <a href="#contacto" className="block text-[0.95rem] mb-2.5 hover:text-accent transition-colors">
               Cómo llegar →
             </a>

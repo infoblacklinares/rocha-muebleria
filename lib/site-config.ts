@@ -36,7 +36,7 @@ export const siteConfig = {
   },
 
   social: {
-    instagram: "",
+    instagram: "https://www.instagram.com/muebleriarocha",
     facebook: ""
   },
 

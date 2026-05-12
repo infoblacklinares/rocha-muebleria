@@ -22,56 +22,32 @@ function tagLabel(tag: Product["tags"][number]) {
 
 function ProductCard({ p }: { p: Product }) {
   return (
-    <article className="reveal group bg-paper rounded-lg p-4 relative transition-all duration-500 cursor-pointer flex flex-col hover:-translate-y-1.5 hover:shadow-[0_24px_50px_rgba(26,20,16,0.08)]">
-      <div
-        className="aspect-square rounded bg-bg-2 bg-cover mb-4 relative overflow-hidden"
-        style={{ backgroundImage: `url(${p.image})`, backgroundPosition: p.bgPosition ?? "center" }}
-      >
-        <div className="absolute top-3 left-3 flex flex-col gap-1.5 z-[2]">
-          {p.tags.map((t) => (
-            <span
-              key={t}
-              className={`font-mono text-[0.6rem] font-medium tracking-[0.12em] px-2.5 py-1 rounded-full ${tagStyle(t)}`}
-            >
-              {tagLabel(t)}
-            </span>
-          ))}
-        </div>
-        <div className="absolute top-3 right-3 flex flex-col gap-1.5 z-[2] opacity-0 translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
-          <button
-            type="button"
-            onClick={(e) => {
-              e.stopPropagation();
-              openWhatsApp(p.whatsappProduct);
-            }}
-            className="w-[34px] h-[34px] bg-paper rounded-full grid place-items-center text-[0.85rem] border border-line transition-colors hover:bg-ink hover:text-bg hover:border-ink"
-            title="Cotizar"
+    <article
+      className="reveal group relative rounded-lg overflow-hidden cursor-pointer aspect-square bg-cover bg-center"
+      style={{ backgroundImage: `url(${p.image})`, backgroundPosition: p.bgPosition ?? "center" }}
+      onClick={() => openWhatsApp(p.whatsappProduct)}
+    >
+      <div className="absolute top-3 left-3 flex flex-col gap-1.5 z-[2]">
+        {p.tags.map((t) => (
+          <span
+            key={t}
+            className={`font-mono text-[0.6rem] font-medium tracking-[0.12em] px-2.5 py-1 rounded-full ${tagStyle(t)}`}
           >
-            ↗
-          </button>
-        </div>
+            {tagLabel(t)}
+          </span>
+        ))}
       </div>
-
-      <div className="flex flex-col gap-2 px-1 pb-1">
-        <div className="flex justify-between items-center font-mono text-[0.62rem] tracking-[0.14em] text-ink-soft">
-          <span>{p.category}</span>
-          {p.rating ? <span className="text-accent text-[0.75rem] font-sans">★ ★ ★ ★ ★</span> : null}
-        </div>
-        <h4 className="font-serif text-[1.05rem] sm:text-[1.15rem] font-medium tracking-tight leading-tight">
-          {p.name}
-        </h4>
-        <div className="mt-1.5">
-          <a
-            href="#"
-            className="text-[0.78rem] font-medium inline-flex items-center gap-1.5 border-b border-ink pb-1 transition-colors hover:text-accent hover:border-accent"
-            onClick={(e) => {
-              e.preventDefault();
-              openWhatsApp(p.whatsappProduct);
-            }}
-          >
-            Cotizar este producto →
-          </a>
-        </div>
+      <div className="absolute inset-0 bg-gradient-to-t from-[rgba(26,20,16,0.85)] to-transparent opacity-0 transition-opacity duration-400 group-hover:opacity-100" />
+      <div className="absolute bottom-5 left-5 right-5 z-[2] text-bg opacity-0 translate-y-2.5 transition-all duration-400 group-hover:opacity-100 group-hover:translate-y-0">
+        <span className="font-mono text-[0.6rem] tracking-[0.14em] text-accent block mb-1">{p.category}</span>
+        <h4 className="font-serif text-[1.1rem] font-medium tracking-tight leading-tight mb-3">{p.name}</h4>
+        <button
+          type="button"
+          onClick={(e) => { e.stopPropagation(); openWhatsApp(p.whatsappProduct); }}
+          className="btn btn-accent btn-sm"
+        >
+          Cotizar →
+        </button>
       </div>
     </article>
   );

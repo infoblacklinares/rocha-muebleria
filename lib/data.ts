@@ -75,29 +75,7 @@ export const products: Product[] = [
     category: "PUERTA · INTERIOR",
     image: "/canva/puertas-pino.jpg",
     tags: ["hot"],
-    rating: 5,
     whatsappProduct: "puerta de pino"
-  },
-  {
-    id: "p-rauli-natural",
-    slug: "puerta-rauli-natural",
-    name: "Puerta raulí natural",
-    category: "PUERTA · RAULÍ",
-    image: "/canva/puertas-rauli.jpg",
-    bgPosition: "right center",
-    tags: ["nuevo", "premium"],
-    rating: 5,
-    whatsappProduct: "puerta de raulí"
-  },
-  {
-    id: "p-mesa-rauli",
-    slug: "mesa-rauli-maciza",
-    name: "Mesa raulí maciza",
-    category: "MESA · COMEDOR",
-    image: "/canva/muebles-cocina.jpg",
-    tags: ["popular"],
-    rating: 5,
-    whatsappProduct: "mesa de raulí"
   },
   {
     id: "p-estante-rauli",
@@ -106,7 +84,6 @@ export const products: Product[] = [
     category: "ESTANTERÍA",
     image: "/canva/muebleria-rocha.jpg",
     tags: ["nuevo"],
-    rating: 5,
     whatsappProduct: "estantería"
   },
   {
@@ -116,7 +93,6 @@ export const products: Product[] = [
     category: "CÓMODA · DORMITORIO",
     image: "/canva/muebles-cocina.jpg",
     tags: ["premium"],
-    rating: 5,
     whatsappProduct: "cómoda"
   },
   {
@@ -126,7 +102,6 @@ export const products: Product[] = [
     category: "VENTANA · TERMOPANEL",
     image: "/canva/puertas-pino.jpg",
     tags: ["pedido"],
-    rating: 5,
     whatsappProduct: "ventana de madera"
   }
 ];

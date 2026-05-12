@@ -16,12 +16,12 @@ export const siteConfig = {
   },
 
   location: {
-    address: "Del fin del valle N°29",
+    address: "Delfín del Valle 7",
     city: "Linares",
     region: "Región del Maule",
     country: "Chile",
     coords: { lat: "35°51′S", lng: "71°35′W" },
-    mapsQuery: "Del fin del valle 29, Linares, Chile"
+    mapsQuery: "Delfín del Valle 7, 3580399 Linares, Maule"
   },
 
   hours: {

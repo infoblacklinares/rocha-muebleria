@@ -48,7 +48,7 @@ export const siteConfig = {
 
   credits: {
     studio: "InfoBl@ck",
-    studioUrl: "#"
+    studioUrl: "https://infoblack.cl"
   }
 } as const;
 

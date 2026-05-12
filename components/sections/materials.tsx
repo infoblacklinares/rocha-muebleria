@@ -19,7 +19,7 @@ export function Materials() {
             </div>
             <div className="reveal text-[0.95rem] opacity-70 max-w-[380px]">
               Cada proyecto empieza con la madera correcta. Trabajamos pino,
-              raulí, coigüe y roble — todas chilenas, todas seleccionadas en
+              raulí y roble — todas chilenas, todas seleccionadas en
               origen.
             </div>
           </div>

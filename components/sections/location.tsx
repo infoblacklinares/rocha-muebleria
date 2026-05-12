@@ -32,7 +32,7 @@ export function Location() {
           <div className="bg-paper rounded-lg p-8 md:p-12">
             <div className="inline-flex items-center gap-2.5 mono-label text-accent mb-4">
               <span className="w-1.5 h-1.5 bg-accent rounded-full" />
-              ABIERTO HOY
+              {new Date().getDay() >= 1 && new Date().getDay() <= 6 ? "ABIERTO HOY" : "ABRIMOS LUN — SÁB"}
             </div>
             <h2 className="h2 text-[clamp(1.8rem,3vw,2.6rem)] mb-7">
               Puertas y Ventanas Rocha.

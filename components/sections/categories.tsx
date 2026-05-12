@@ -16,7 +16,7 @@ export function Categories() {
           </div>
           <div className="flex items-center gap-3 text-ink-soft text-[0.88rem]">
             <span className="w-[30px] h-px bg-ink-soft" />
-            <strong className="text-ink">+200</strong>&nbsp;proyectos únicos &nbsp;·&nbsp; <a href="#productos" className="hover:text-accent transition-colors">Ver todas las categorías →</a>
+            <a href="#productos" className="hover:text-accent transition-colors">Ver todas las categorías →</a>
           </div>
         </div>
 

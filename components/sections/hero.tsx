@@ -69,9 +69,7 @@ export function Hero() {
             </a>
             <div className="inline-flex items-center gap-3 sm:gap-3.5 sm:ml-3 text-[0.78rem] sm:text-[0.82rem] text-ink-soft basis-full sm:basis-auto mt-2 sm:mt-0">
               <span className="text-accent tracking-[1px]">★ ★ ★ ★ ★</span>
-              <span>
-                <strong className="text-ink">+200</strong> proyectos entregados
-              </span>
+              <span>Taller artesanal en Linares</span>
             </div>
           </div>
         </div>

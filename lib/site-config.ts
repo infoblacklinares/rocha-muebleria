@@ -41,7 +41,7 @@ export const siteConfig = {
   },
 
   site: {
-    url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://infoblack.cl/",
+    url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://rocha-mueblerialinares.vercel.app",
     locale: "es-CL",
     established: 2003
   },

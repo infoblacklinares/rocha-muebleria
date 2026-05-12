@@ -20,20 +20,20 @@ export function Showcase() {
                   <span className="inline-block w-1.5 h-1.5 bg-accent rounded-full" />
                   Pieza destacada
                 </span>
-                <span className="mono-label text-bg/70">— RAULÍ</span>
+                <span className="mono-label text-bg/70">— MADERA NATIVA</span>
               </div>
               <div>
                 <h2
                   className="font-serif text-[clamp(1.6rem,4.5vw,3.5rem)] tracking-tight font-normal leading-[0.95] mb-3.5"
                   style={{ fontVariationSettings: '"opsz" 80, "SOFT" 50' }}
                 >
-                  Puertas en <em className="italic text-accent">raulí</em>
+                  Puertas y muebles
                   <br />
-                  maciza natural
+                  <em className="italic text-accent">a tu medida</em>
                 </h2>
                 <p className="max-w-[380px] text-[0.9rem] sm:text-[0.95rem] opacity-90 mb-5 sm:mb-6">
-                  Madera nativa noble, dura y duradera. Para entradas
-                  principales que destacan por el carácter de la veta.
+                  Fabricamos en pino, raulí y maderas nativas chilenas.
+                  Del taller en Linares directo a tu hogar.
                 </p>
                 <a
                   href="#"

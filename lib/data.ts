@@ -16,6 +16,7 @@ export type Product = {
   name: string;
   category: string;
   image: string;
+  bgPosition?: string;
   tags: Array<"hot" | "nuevo" | "premium" | "a-medida" | "popular" | "pedido">;
   rating?: number;
   whatsappProduct: string;
@@ -83,6 +84,7 @@ export const products: Product[] = [
     name: "Puerta raulí natural",
     category: "PUERTA · RAULÍ",
     image: "/canva/puertas-rauli.jpg",
+    bgPosition: "right center",
     tags: ["nuevo", "premium"],
     rating: 5,
     whatsappProduct: "puerta de raulí"

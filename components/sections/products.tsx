@@ -24,8 +24,8 @@ function ProductCard({ p }: { p: Product }) {
   return (
     <article className="reveal group bg-paper rounded-lg p-4 relative transition-all duration-500 cursor-pointer flex flex-col hover:-translate-y-1.5 hover:shadow-[0_24px_50px_rgba(26,20,16,0.08)]">
       <div
-        className="aspect-square rounded bg-bg-2 bg-cover bg-center mb-4 relative overflow-hidden"
-        style={{ backgroundImage: `url(${p.image})` }}
+        className="aspect-square rounded bg-bg-2 bg-cover mb-4 relative overflow-hidden"
+        style={{ backgroundImage: `url(${p.image})`, backgroundPosition: p.bgPosition ?? "center" }}
       >
         <div className="absolute top-3 left-3 flex flex-col gap-1.5 z-[2]">
           {p.tags.map((t) => (

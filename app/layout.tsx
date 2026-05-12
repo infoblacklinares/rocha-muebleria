@@ -35,10 +35,15 @@ export const metadata: Metadata = {
     "mueblería linares",
     "puertas de madera linares",
     "muebles a medida chile",
+    "puertas de raulí linares",
+    "puertas de pino linares",
+    "ventanas de madera linares",
+    "carpintería linares",
+    "muebles a medida maule",
+    "cocinas a medida linares",
+    "madera nativa chile",
     "raulí",
-    "madera nativa",
-    "cocinas a medida maule",
-    "carpintería linares"
+    "taller de madera linares"
   ],
   authors: [{ name: siteConfig.owner.name }],
   creator: siteConfig.credits.studio,
@@ -48,20 +53,56 @@ export const metadata: Metadata = {
     url: siteConfig.site.url,
     siteName: siteConfig.fullName,
     title: `${siteConfig.shortName} · ${siteConfig.tagline}`,
-    description: siteConfig.description
+    description: siteConfig.description,
+    images: [{ url: "/canva/muebleria-rocha.jpg", width: 400, height: 500, alt: siteConfig.fullName }]
   },
   twitter: {
     card: "summary_large_image",
     title: `${siteConfig.shortName} · ${siteConfig.tagline}`,
-    description: siteConfig.description
+    description: siteConfig.description,
+    images: ["/canva/muebleria-rocha.jpg"]
   },
-  robots: { index: true, follow: true }
+  robots: { index: true, follow: true },
+  alternates: { canonical: siteConfig.site.url }
 };
 
 export const viewport: Viewport = {
   themeColor: "#F8F4ED",
   width: "device-width",
   initialScale: 1
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: siteConfig.fullName,
+  description: siteConfig.description,
+  url: siteConfig.site.url,
+  telephone: `+${siteConfig.contact.whatsapp}`,
+  foundingDate: String(siteConfig.site.established),
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: siteConfig.location.address,
+    addressLocality: siteConfig.location.city,
+    addressRegion: siteConfig.location.region,
+    addressCountry: "CL"
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: "-35.8500",
+    longitude: "-71.5833"
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      opens: "09:00",
+      closes: "20:00"
+    }
+  ],
+  priceRange: "$$",
+  image: `${siteConfig.site.url}/canva/muebleria-rocha.jpg`,
+  sameAs: []
 };
 
 export default function RootLayout({
@@ -72,6 +113,12 @@ export default function RootLayout({
       lang="es-CL"
       className={`${fraunces.variable} ${bricolage.variable} ${jetbrains.variable}`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body>{children}</body>
     </html>
   );

@@ -31,7 +31,7 @@ export const siteConfig = {
 
   contact: {
     // ⚠️ Reemplazar por número real (formato: 56 + 9 + 8 dígitos, sin '+' ni espacios)
-    whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "56900000000",
+    whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "56973661593",
     email: process.env.NEXT_PUBLIC_BUSINESS_EMAIL ?? ""
   },
 

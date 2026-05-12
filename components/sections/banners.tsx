@@ -6,16 +6,14 @@ const BANNERS = [
     deal: "A PEDIDO",
     title: "Muebles a medida",
     desc: "Diseñamos contigo desde el boceto. Madera nativa, terminación impecable.",
-    image:
-      "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=1200&q=85",
+    image: "/canva/muebles-cocina.jpg",
     producto: "mueble a medida"
   },
   {
     deal: "DESTACADO",
     title: "Puertas en raulí",
     desc: "Madera nativa, dura y noble. Para entradas que importan.",
-    image:
-      "https://images.unsplash.com/photo-1597072689227-8882273e8f6a?w=1200&q=85",
+    image: "/canva/puertas-rauli.jpg",
     producto: "puerta de raulí"
   }
 ];

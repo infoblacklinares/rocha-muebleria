@@ -10,7 +10,7 @@ export function Showcase() {
             className="reveal relative rounded-lg overflow-hidden min-h-[380px] sm:min-h-[480px] bg-cover bg-center"
             style={{
               backgroundImage:
-                "url('https://images.unsplash.com/photo-1597072689227-8882273e8f6a?w=1400&q=85')"
+                "url('/canva/puertas-rauli.jpg')"
             }}
           >
             <div className="absolute inset-0 bg-gradient-to-b from-[rgba(26,20,16,0.1)] to-[rgba(26,20,16,0.85)]" />
@@ -53,7 +53,7 @@ export function Showcase() {
             className="reveal relative rounded-lg overflow-hidden min-h-[480px] bg-cover bg-center"
             style={{
               backgroundImage:
-                "url('https://images.unsplash.com/photo-1565374395542-0ce18882c857?w=1000&q=85')"
+                "url('/canva/puertas-pino.jpg')"
             }}
           >
             <div className="absolute inset-0 bg-gradient-to-b from-[rgba(26,20,16,0.1)] to-[rgba(26,20,16,0.85)]" />

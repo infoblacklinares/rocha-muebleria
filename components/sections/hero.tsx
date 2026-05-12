@@ -3,8 +3,7 @@ import { useEffect, useState } from "react";
 import { openWhatsApp } from "@/lib/whatsapp";
 import { getCatalogLabel } from "@/lib/site-config";
 
-const HERO_IMG =
-  "https://images.unsplash.com/photo-1601058268499-e52658b8bb88?w=1400&q=85";
+const HERO_IMG = "/canva/muebleria-rocha.jpg";
 
 export function Hero() {
   // Etiqueta dinámica (estación + año) calculada en el cliente para evitar

@@ -39,13 +39,6 @@ function ProductCard({ p }: { p: Product }) {
         </div>
         <div className="absolute top-3 right-3 flex flex-col gap-1.5 z-[2] opacity-0 translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
           <button
-            className="w-[34px] h-[34px] bg-paper rounded-full grid place-items-center text-[0.85rem] border border-line transition-colors hover:bg-ink hover:text-bg hover:border-ink"
-            title="Favorito"
-            type="button"
-          >
-            ♡
-          </button>
-          <button
             type="button"
             onClick={(e) => {
               e.stopPropagation();
@@ -119,8 +112,12 @@ function CustomCard() {
 export function Products() {
   const [tab, setTab] = useState<TabKey>("DESTACADOS");
 
-  // Por ahora todos los tabs muestran el mismo set — listo para filtrar cuando agregues más data
-  const filtered = products;
+  const filtered = products.filter((p) => {
+    if (tab === "DESTACADOS") return p.tags.some(t => ["hot", "popular", "premium"].includes(t));
+    if (tab === "RECIENTES") return p.tags.includes("nuevo");
+    if (tab === "A PEDIDO") return p.tags.some(t => ["pedido", "a-medida"].includes(t));
+    return true;
+  });
 
   return (
     <section className="section-padding" id="productos">
@@ -149,7 +146,7 @@ export function Products() {
                 )}
               </button>
             ))}
-            <a href="#" className="btn btn-ghost btn-sm">Ver todo →</a>
+            <a href="#contacto" className="btn btn-ghost btn-sm">Ver todo →</a>
           </div>
         </div>
 

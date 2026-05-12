@@ -13,7 +13,7 @@ const BANNERS = [
     deal: "DESTACADO",
     title: "Puertas en raulí",
     desc: "Madera nativa, dura y noble. Para entradas que importan.",
-    image: "/canva/puertas-rauli.jpg",
+    image: "/canva/muebleria-rocha.jpg",
     producto: "puerta de raulí"
   }
 ];

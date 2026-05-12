@@ -56,7 +56,7 @@ export const categories: Category[] = [
     slug: "puertas-rauli",
     title: "Puertas raulí",
     badge: "Premium",
-    image: "/canva/puertas-rauli.jpg"
+    image: "/canva/muebleria-rocha.jpg"
   },
   {
     slug: "muebles",
@@ -175,7 +175,7 @@ export const gallery: GalleryItem[] = [
     id: "g2",
     category: "Puerta de raulí",
     caption: "Puertas terminadas en raulí",
-    image: "/canva/puertas-rauli.jpg",
+    image: "/canva/muebleria-rocha.jpg",
     size: "gx-2"
   },
   {

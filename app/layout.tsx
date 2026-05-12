@@ -63,7 +63,8 @@ export const metadata: Metadata = {
     images: ["/canva/muebleria-rocha.jpg"]
   },
   robots: { index: true, follow: true },
-  alternates: { canonical: siteConfig.site.url }
+  alternates: { canonical: siteConfig.site.url },
+  verification: { google: "aVwByyabkiNUH3UAai9pY3TErwrR0c831Dh8KwsdByc" }
 };
 
 export const viewport: Viewport = {

@@ -1,10 +1,6 @@
 "use client";
-import { useState } from "react";
 import { products, type Product } from "@/lib/data";
 import { openWhatsApp } from "@/lib/whatsapp";
-
-const TABS = ["DESTACADOS", "RECIENTES", "A PEDIDO"] as const;
-type TabKey = (typeof TABS)[number];
 
 function tagStyle(tag: Product["tags"][number]) {
   if (tag === "hot" || tag === "popular") return "bg-accent text-paper";
@@ -86,15 +82,6 @@ function CustomCard() {
 }
 
 export function Products() {
-  const [tab, setTab] = useState<TabKey>("DESTACADOS");
-
-  const filtered = products.filter((p) => {
-    if (tab === "DESTACADOS") return p.tags.some(t => ["hot", "popular", "premium"].includes(t));
-    if (tab === "RECIENTES") return p.tags.includes("nuevo");
-    if (tab === "A PEDIDO") return p.tags.some(t => ["pedido", "a-medida"].includes(t));
-    return true;
-  });
-
   return (
     <section className="section-padding" id="productos">
       <div className="wrap">
@@ -106,28 +93,10 @@ export function Products() {
               <em className="italic text-accent">.</em>
             </h2>
           </div>
-          <div className="flex flex-wrap gap-7 items-center">
-            {TABS.map((t) => (
-              <button
-                key={t}
-                type="button"
-                onClick={() => setTab(t)}
-                className={`mono-label py-1.5 relative transition-colors cursor-pointer ${
-                  tab === t ? "text-ink" : "text-ink-soft hover:text-ink"
-                }`}
-              >
-                {t}
-                {tab === t && (
-                  <span className="absolute bottom-0 inset-x-0 h-px bg-ink" />
-                )}
-              </button>
-            ))}
-            <a href="#contacto" className="btn btn-ghost btn-sm">Ver todo →</a>
-          </div>
         </div>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          {filtered.map((p) => (
+          {products.map((p) => (
             <ProductCard key={p.id} p={p} />
           ))}
           <CustomCard />

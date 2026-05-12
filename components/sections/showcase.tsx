@@ -10,7 +10,7 @@ export function Showcase() {
             className="reveal relative rounded-lg overflow-hidden min-h-[380px] sm:min-h-[480px] bg-cover bg-center"
             style={{
               backgroundImage:
-                "url('/canva/puertas-rauli.jpg')"
+                "url('/canva/muebleria-rocha.jpg')"
             }}
           >
             <div className="absolute inset-0 bg-gradient-to-b from-[rgba(26,20,16,0.1)] to-[rgba(26,20,16,0.85)]" />

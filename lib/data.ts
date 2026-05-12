@@ -49,19 +49,19 @@ export const categories: Category[] = [
     slug: "puertas-pino",
     title: "Puertas pino",
     badge: "12 modelos",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=85"
+    image: "/canva/puertas-pino.jpg"
   },
   {
     slug: "puertas-rauli",
     title: "Puertas raulí",
     badge: "Premium",
-    image: "https://images.unsplash.com/photo-1597072689227-8882273e8f6a?w=600&q=85"
+    image: "/canva/puertas-rauli.jpg"
   },
   {
     slug: "muebles",
     title: "Muebles",
     badge: "A pedido",
-    image: "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=600&q=85"
+    image: "/canva/muebles-cocina.jpg"
   }
 ];
 
@@ -72,7 +72,7 @@ export const products: Product[] = [
     slug: "puerta-pino-clasica",
     name: "Puerta pino clásica",
     category: "PUERTA · INTERIOR",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=85",
+    image: "/canva/puertas-pino.jpg",
     tags: ["hot"],
     rating: 5,
     whatsappProduct: "puerta de pino"
@@ -82,7 +82,7 @@ export const products: Product[] = [
     slug: "puerta-rauli-natural",
     name: "Puerta raulí natural",
     category: "PUERTA · RAULÍ",
-    image: "https://images.unsplash.com/photo-1597072689227-8882273e8f6a?w=800&q=85",
+    image: "/canva/puertas-rauli.jpg",
     tags: ["nuevo", "premium"],
     rating: 5,
     whatsappProduct: "puerta de raulí"
@@ -92,7 +92,7 @@ export const products: Product[] = [
     slug: "mesa-rauli-maciza",
     name: "Mesa raulí maciza",
     category: "MESA · COMEDOR",
-    image: "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=800&q=85",
+    image: "/canva/muebles-cocina.jpg",
     tags: ["popular"],
     rating: 5,
     whatsappProduct: "mesa de raulí"
@@ -102,7 +102,7 @@ export const products: Product[] = [
     slug: "estante-rauli",
     name: "Estante en raulí",
     category: "ESTANTERÍA",
-    image: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=800&q=85",
+    image: "/canva/muebleria-rocha.jpg",
     tags: ["nuevo"],
     rating: 5,
     whatsappProduct: "estantería"
@@ -112,7 +112,7 @@ export const products: Product[] = [
     slug: "comoda-rauli",
     name: "Cómoda raulí",
     category: "CÓMODA · DORMITORIO",
-    image: "https://images.unsplash.com/photo-1616627052149-22c4f8a6316e?w=800&q=85",
+    image: "/canva/muebles-cocina.jpg",
     tags: ["premium"],
     rating: 5,
     whatsappProduct: "cómoda"
@@ -122,7 +122,7 @@ export const products: Product[] = [
     slug: "ventana-pino",
     name: "Ventana pino",
     category: "VENTANA · TERMOPANEL",
-    image: "https://images.unsplash.com/photo-1565374395542-0ce18882c857?w=800&q=85",
+    image: "/canva/puertas-pino.jpg",
     tags: ["pedido"],
     rating: 5,
     whatsappProduct: "ventana de madera"
@@ -189,37 +189,37 @@ export const steps: Step[] = [
 export const gallery: GalleryItem[] = [
   {
     id: "g1",
-    category: "Fachada · Linares",
-    caption: "Foto: fachada del local",
-    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1400&q=85",
+    category: "Mueblería Rocha",
+    caption: "Puertas y ventanas de madera",
+    image: "/canva/muebleria-rocha.jpg",
     size: "gx-1"
   },
   {
     id: "g2",
     category: "Puerta de raulí",
-    caption: "Foto: puertas terminadas",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=85",
+    caption: "Puertas terminadas en raulí",
+    image: "/canva/puertas-rauli.jpg",
     size: "gx-2"
   },
   {
     id: "g3",
     category: "Mueble en raulí",
-    caption: "Foto: muebles a medida",
-    image: "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=900&q=85",
+    caption: "Muebles de cocina a medida",
+    image: "/canva/muebles-cocina.jpg",
     size: "gx-3"
   },
   {
     id: "g4",
-    category: "Taller",
-    caption: "Foto: taller en proceso",
-    image: "https://images.unsplash.com/photo-1565374395542-0ce18882c857?w=900&q=85",
+    category: "Puerta de pino",
+    caption: "Puertas de pino clásicas",
+    image: "/canva/puertas-pino.jpg",
     size: "gx-4"
   },
   {
     id: "g5",
-    category: "Mueble a pedido",
-    caption: "Foto: muebles a medida",
-    image: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=900&q=85",
+    category: "Cliente satisfecho",
+    caption: "Excelente calidad, puntuales en la entrega",
+    image: "/canva/testimonio.jpg",
     size: "gx-5"
   }
 ];

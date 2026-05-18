@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { openWhatsApp } from "@/lib/whatsapp";
 
 const links = [
-  { href: "#", label: "Inicio", active: true },
+  { href: "/", label: "Inicio", active: true },
   { href: "#productos", label: "Catálogo" },
   { href: "#materiales", label: "Maderas" },
   { href: "#proceso", label: "Taller" },
@@ -29,7 +29,7 @@ export function Nav() {
           : "py-5 px-[var(--gutter)] border-transparent"
       }`}
     >
-      <a href="#" className="flex items-center gap-2.5">
+      <a href="/" className="flex items-center gap-2.5">
         <span className="w-[30px] h-[30px] bg-ink text-bg grid place-items-center rounded-full font-serif italic text-[0.95rem]">
           R
         </span>

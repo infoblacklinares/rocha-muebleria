@@ -12,7 +12,7 @@ export function Footer() {
       <div className="wrap">
         <div className="grid lg:grid-cols-[1.5fr_1fr_1fr_1fr] gap-12 mb-16">
           <div>
-            <a href="#" className="inline-flex items-center gap-2.5 mb-5">
+            <a href="/" className="inline-flex items-center gap-2.5 mb-5">
               <span className="w-[30px] h-[30px] bg-ink text-bg grid place-items-center rounded-full font-serif italic text-[0.95rem]">
                 R
               </span>
